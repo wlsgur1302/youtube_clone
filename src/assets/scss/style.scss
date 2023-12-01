@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// 세팅
+@import "setting/fonts";
+@import "setting/vars"; // 변수 선언하고
+@import "setting/reset"; // 그리고 리셋해야댐 그래야 textarea 부분 읽음
+@import "setting/mixin";
+@import "setting/common";
+
+// 이름 앞에 _ 붙인 이유는 다 include 되있다는 뜻
