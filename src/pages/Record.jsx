@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Developer = () => {
+const Record = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Developer = () => {
   )
 }
 
-export default Developer
+export default Record

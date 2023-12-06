@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Today = () => {
+const myVideo = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Today = () => {
   )
 }
 
-export default Today
+export default myVideo

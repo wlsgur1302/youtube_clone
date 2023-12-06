@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Channel = () => {
+const Like = () => {
   return (
     <div>
-      Channel
+      Like
     </div>
   )
 }
 
-export default Channel
+export default Like
