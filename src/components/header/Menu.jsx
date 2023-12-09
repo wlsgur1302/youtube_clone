@@ -10,6 +10,7 @@ const Menu = () => {
         <nav className='header_menu'>
             <ul className='menu'>
                 {headerMenu.map((menu, key) => (
+                    // 삼항연산자로 클릭한 메뉴만 활성화하기 
                     <li key={key} className={location.pathname === menu.src ? 'active' : ''}>
                         <Link to={menu.src}>
                             {menu.icon}{menu.title}

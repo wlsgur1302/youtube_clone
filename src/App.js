@@ -1,43 +1,40 @@
-import React from 'react'
+import React, { Suspense,lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import Home from './pages/Home'
-import Record from './pages/Record'
-import MyVideo from './pages/MyVideo'
-import Webd from './pages/Webd'
-import Website from './pages/Website'
-import Gsap from './pages/Gsap'
-import Port from './pages/Port'
-import Youtube from './pages/Youtube'
-import Like from './pages/Like'
-import Video from './pages/Video'
-import Search from './pages/Search'
-import Not from './pages/Not'
-import Header from './components/section/Header';
 import Main from './components/section/Main';
-import Footer from './components/Footer';
+
+const Home = lazy(() => import('./pages/Home'));
+const Record = lazy(() => import('./pages/Record'));
+const MyVideo = lazy(() => import('./pages/MyVideo'));
+const Youtube = lazy(() => import('./pages/Youtube'));
+const Like = lazy(() => import('./pages/Like'));
+const Video = lazy(() => import('./pages/Video'));
+const Search = lazy(() => import('./pages/Search'));
+const Not = lazy(() => import('./pages/Not'));
 
 const App = () => { // 함수형 컴포넌트 정의
+/* Suspense를 사용하면 데이터나 컴포넌트가 로딩되기를 기다릴수 있다.
+    로딩중에는 대체 컨텐츠 표시 가능
+*/
+ /*
+    lazy는 비동기적으로 컴포넌트 로드함
+
+    fallback은 Suspense 컴포넌트에서 로당중에 표시할 컴포넌트 지정
+ */
     return (
         <BrowserRouter>
-            <Header />
-            <Main>
+            
+            <Suspense fallback={<Main/>}>
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/record' element={<Record />} />
                     <Route path='/myVideo' element={<MyVideo />} />
-                    <Route path='/webd' element={<Webd />} />
-                    <Route path='/website' element={<Website />} />
-                    <Route path='/gsap' element={<Gsap />} />
-                    <Route path='/port' element={<Port />} />
                     <Route path='/youtube' element={<Youtube />} />
                     <Route path='/like' element={<Like />} />
                     <Route path='/video/:videoId' element={<Video />} />
                     <Route path='/search/:searchId' element={<Search />} />
                     <Route path='*' element={<Not />} />
                 </Routes>
-            </Main>
-            <Footer />
+            </Suspense>
         </BrowserRouter>
     );
 }
