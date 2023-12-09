@@ -5,7 +5,6 @@ import Main from './components/section/Main';
 const Home = lazy(() => import('./pages/Home'));
 const Record = lazy(() => import('./pages/Record'));
 const MyVideo = lazy(() => import('./pages/MyVideo'));
-const Youtube = lazy(() => import('./pages/Youtube'));
 const Like = lazy(() => import('./pages/Like'));
 const Video = lazy(() => import('./pages/Video'));
 const Search = lazy(() => import('./pages/Search'));
@@ -28,7 +27,6 @@ const App = () => { // 함수형 컴포넌트 정의
                     <Route path='/' element={<Home />} />
                     <Route path='/record' element={<Record />} />
                     <Route path='/myVideo' element={<MyVideo />} />
-                    <Route path='/youtube' element={<Youtube />} />
                     <Route path='/like' element={<Like />} />
                     <Route path='/video/:videoId' element={<Video />} />
                     <Route path='/search/:searchId' element={<Search />} />

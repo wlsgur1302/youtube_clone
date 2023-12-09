@@ -3,7 +3,10 @@ import Main from '../components/section/Main'
 
 const Like = () => {
   return (
-    <Main>
+    <Main
+    title = "Like"
+    description="좋아요 표시한 동영상"
+    >
       Like
     </Main>
   )
