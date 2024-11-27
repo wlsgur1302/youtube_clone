@@ -1,28 +1,38 @@
 .header_logo {
     border-bottom: 1px solid var(--black100);
     display: flex;
-    padding: 5px;
-    margin: 10px;
+    
+    margin-left: 16px;
+    align-items: center;
 
+
+    button {
+        background-color: black;
+        height: 40px;
+
+        &:hover {
+            background-color: #2E2E2E;
+            color: black;
+            border-radius: 50%;
+            }
+        
+    }
+    .hamburger {
+        padding: 8px;
+     
+    }
 
     a {
-
-        padding-left: 17px;
+        height: 53.328px;
+        width: 128px;
+        
         display: flex;
 
-        img {
-            width: 25px;
-            height: 25px;
-            display: block;
-            margin-left: 15px;
-        }
-
-        span {
-            padding-top: 7px;
-            font-size: 15px;
-            line-height: 1;
-            font-weight: 900;
-            text-transform: uppercase;
+        .logo {
+            margin: 16px;
+            height: 21.328px;
+            width: 96px;
+              
         }
     }
 }

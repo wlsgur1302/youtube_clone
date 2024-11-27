@@ -1,14 +1,15 @@
 import React from "react";
-import { FaYoutube } from "react-icons/fa";
+import { ReactComponent as Youtube_logo } from "../../assets/svg/YouTube_Logo.svg" 
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Logo=()=>{
     return(
         <h1 className='header_logo'>
-            <GiHamburgerMenu size='25px' color='#A4A4A4'/>
+            <button>
+                <GiHamburgerMenu className='hamburger' size='40px' color='white'/>
+            </button>
             <a href="/">
-                <FaYoutube color='red'/>
-                <span>Youtube</span>
+                <Youtube_logo className="logo" ></Youtube_logo>              
             </a>
       </h1>
     )
